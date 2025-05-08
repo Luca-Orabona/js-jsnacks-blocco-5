@@ -17,3 +17,32 @@ const mele = [
 ];
 
 // A partire dall'array fornito, crea due array. Uno con le mele di almeno 7 cm di diametro. L'altro con le restanti.
+
+
+// metodo filter
+const diamentroMele = mele.filter((mela) => mela.diametro <= 7);
+console.log(diamentroMele);
+
+const diamentroMele2 = mele.filter((mela) => mela.diametro > 7);
+console.log(diamentroMele2);
+
+
+
+// ciclo foreach
+const diamentroMele3 = [];
+const diamentroMele4 = [];
+
+mele.forEach((mela) => mela.diametro <= 7 ? diamentroMele3.push(mela) : diamentroMele4.push(mela)); // uso del ternario
+/* {
+
+  if(mela.diametro <= 7) {
+
+    diamentroMele3.push(mela);
+                                    //uso condizione if...else
+  } else {
+
+    diamentroMele4.push(mela);
+  }
+}); */ 
+
+console.log(diamentroMele3, diamentroMele4);
